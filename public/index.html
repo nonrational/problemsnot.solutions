@@ -1,10 +1,45 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>problems not solutions</title>
-</head>
-<body>
-Hello world!
-</body>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <style>
+      .hidden {
+        display: none
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Problems not Solutions</h1>
+      <p>
+        Please wait...
+      </p>
+      <div class="mermaid hidden">
+        graph TB
+          %% Starting with a Problem
+          PI[Identify Problem] --> RU[Research & Understand]
+          RU --> BS[Brainstorm Solutions]
+          BS --> PT[Prototype & Test]
+          PT --> IR[Iterate & Refine]
+          IR --> FS[Final Solution]
+
+          %% Starting with a Solution
+          PS[Propose Solution] --> FF[Force Fit]
+          FF --> EI[Encounter Issues]
+          EI --> BA[Backtrack & Adjust]
+          BA --> SO[Suboptimal Outcome]
+
+          %% Comparative Link
+          Start{Start} -->|With Problem| PI
+          Start -->|With Solution| PS
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+      const theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+      mermaid.initialize({ theme, startOnLoad: true });
+    </script>
+  </body>
 </html>
